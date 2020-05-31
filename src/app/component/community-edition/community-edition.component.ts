@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {cityList, CityModel} from '../../model/city.model';
+import {CityModel} from '../../model/city.model';
 import {AgGridAngular} from 'ag-grid-angular';
+import {HttpDataService} from '../../service/http-data.service';
 
 @Component({
   selector: 'app-community-edition',
@@ -12,7 +12,7 @@ export class CommunityEditionComponent implements OnInit {
 
   @ViewChild('agGridTemplate', {static: false}) agGrid: AgGridAngular;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpDataService) { }
 
   columnDefs = [
     {headerName: 'ID', field: 'id', sortable: true, filter: true , checkboxSelection: true},
@@ -24,11 +24,8 @@ export class CommunityEditionComponent implements OnInit {
   rowData: CityModel[];
 
   ngOnInit(): void {
-    // this.http.get<any>('http://localhost:8085/stacktech/getallCity')
-    //   .subscribe(response => this.rowData =  response.data.cityList
-    //   );
-    // console.warn('rowData=', this.rowData);
-    this.rowData = cityList;
+    this.http.getAllCityOnLoad().subscribe(response => this.rowData =  response.data.cityList);
+    console.warn('rowData=', this.rowData);
   }
 
   getSelectedRows(): void {
