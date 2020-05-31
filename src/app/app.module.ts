@@ -14,12 +14,17 @@ import {AboutMeComponent} from './component/about-me/about-me.component';
 import {HomePageComponent} from './component/home-page/home-page.component';
 import {AgGridModule} from 'ag-grid-angular';
 import {HttpClientModule} from '@angular/common/http';
+import 'ag-grid-enterprise';
+import {CommunityEditionComponent} from './component/community-edition/community-edition.component';
+import {EnterpriseEditionComponent} from './component/enterprise-edition/enterprise-edition.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     AboutMeComponent,
+    CommunityEditionComponent,
+    EnterpriseEditionComponent,
   ],
   imports: [
     BrowserModule,
