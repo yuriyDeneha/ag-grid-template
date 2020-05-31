@@ -12,7 +12,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
     
 - **Add** `@import "~@angular/material/prebuilt-themes/indigo-pink.css";` in style.css
 - **Add** imports in app.module.ts <br>`BrowserAnimationsModule,MatMenuModule,MatButtonModule,MatIconModule,MatSidenavModule,MatListModule,MatToolbarModule` 
-### Add Ag-Grid community dependency
+### Add Ag-Grid Community Edition dependency
     npm install --save ag-grid-community ag-grid-angular
     npm install  (Note: Update package.json )
 **Add** below 2 points in app.module.ts
@@ -22,4 +22,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 **Add** imports in style.css
 - `@import "~ag-grid-community/dist/styles/ag-grid.css"; `
 - `@import "~ag-grid-community/dist/styles/ag-theme-balham.css"; ` 
+
+### Add Ag-Grid Enterprise Edition dependency
+    npm install --save ag-grid-enterprise
+**Add** below point in app.module.ts
+- import ` 'ag-grid-enterprise'; `     
  
