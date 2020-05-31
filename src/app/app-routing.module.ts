@@ -2,10 +2,13 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AboutMeComponent} from './component/about-me/about-me.component';
 import {HomePageComponent} from './component/home-page/home-page.component';
-
+import {CommunityEditionComponent} from './component/community-edition/community-edition.component';
+import {EnterpriseEditionComponent} from './component/enterprise-edition/enterprise-edition.component';
 
 const routes: Routes = [
   { path: '',       component: HomePageComponent  },
+  { path: 'community',  component: CommunityEditionComponent },
+  { path: 'enterprise',  component: EnterpriseEditionComponent },
   { path: 'about',  component: AboutMeComponent },
   { path: '**',     redirectTo: '/'  }
 ];
