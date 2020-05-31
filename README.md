@@ -20,6 +20,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 - `import:[AgGridModule.withComponents([])]`
 
 **Add** imports in style.css
-- `import "~ag-grid-community/dist/styles/ag-grid.css"; `
-- `import "~ag-grid-community/dist/styles/ag-theme-balham.css"; ` 
+- `@import "~ag-grid-community/dist/styles/ag-grid.css"; `
+- `@import "~ag-grid-community/dist/styles/ag-theme-balham.css"; ` 
  
