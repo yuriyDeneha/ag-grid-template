@@ -13,6 +13,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {AboutMeComponent} from './component/about-me/about-me.component';
 import {HomePageComponent} from './component/home-page/home-page.component';
 import {AgGridModule} from 'ag-grid-angular';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {AgGridModule} from 'ag-grid-angular';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
