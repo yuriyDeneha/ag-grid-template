@@ -6,6 +6,10 @@ export interface CityModel {
   population: number;
 }
 
+export interface ResponseObject {
+  cityList: CityModel[];
+}
+
 export const cityList =
   [{'id': 1, 'name': 'Kabul', 'countrycode': 'AFG', 'district': 'Kabol', 'population': 1780000}, {
     'id': 2,
