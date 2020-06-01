@@ -1,0 +1,24 @@
+<ag-grid-angular
+  #agGrid
+  style="width: 80%; height: 75%;"
+  id="myGrid"
+  class="ag-theme-alpine"
+  [columnDefs]="columnDefs"
+  [autoGroupColumnDef]="autoGroupColumnDef"
+  [defaultColDef]="defaultColDef"
+  [suppressRowClickSelection]="true"
+  [groupSelectsChildren]="true"
+  [debug]="true"
+  [rowSelection]="rowSelection"
+  [rowGroupPanelShow]="rowGroupPanelShow"
+  [pivotPanelShow]="pivotPanelShow"
+  [enableRangeSelection]="true"
+
+  [pagination]="true"
+  [paginationPageSize]="paginationPageSize"
+  [cacheBlockSize]="cacheBlockSize"
+  [animateRows]="true"
+
+  [rowData]="rowData"
+  (gridReady)="onGridReady($event)"
+></ag-grid-angular>
