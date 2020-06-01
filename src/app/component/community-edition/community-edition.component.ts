@@ -11,7 +11,7 @@ import {HttpDataService} from '../../service/http-data.service';
 export class CommunityEditionComponent implements OnInit {
 
   @ViewChild('agGridTemplate', {static: false}) agGrid: AgGridAngular;
-
+  selectedDataStringPresentation: any;
   constructor(private http: HttpDataService) { }
 
   columnDefs = [
@@ -31,10 +31,10 @@ export class CommunityEditionComponent implements OnInit {
   getSelectedRows(): void {
     const selectedNodes = this.agGrid.api.getSelectedNodes();
     const selectedData = selectedNodes.map(node => node.data);
-    const selectedDataStringPresentation = selectedData
-      .map(node => node.id + '   ' + node.name)
-      .join(', ');
-    alert(`Selected Values:: ${selectedDataStringPresentation}`);
+    this.selectedDataStringPresentation = selectedData
+      .map(node => '[ ID =' + node.id + '   ' + 'Name =' + node.name + ' ]')
+      .join(',   ');
+    console.log('selectedData==', selectedData);
   }
 
 }
