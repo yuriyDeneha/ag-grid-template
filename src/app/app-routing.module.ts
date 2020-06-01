@@ -4,8 +4,8 @@ import {AboutMeComponent} from './component/about-me/about-me.component';
 import {HomePageComponent} from './component/home-page/home-page.component';
 import {CommunityEditionComponent} from './component/community-edition/community-edition.component';
 import {EnterpriseEditionComponent} from './component/enterprise-edition/enterprise-edition.component';
-import {ServerSidePaginationComponent} from './component/pagination/server-side-pagination/server-side-pagination.component';
 import {StaticPaginationComponent} from './component/pagination/static-pagination/static-pagination.component';
+import {ServerSidePaginationComponent} from './component/pagination/server-side-pagination/server-side-pagination.component';
 
 const routes: Routes = [
   { path: '',       component: HomePageComponent  },
