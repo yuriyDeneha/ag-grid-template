@@ -17,6 +17,8 @@ import {HttpClientModule} from '@angular/common/http';
 import 'ag-grid-enterprise';
 import {CommunityEditionComponent} from './component/community-edition/community-edition.component';
 import {EnterpriseEditionComponent} from './component/enterprise-edition/enterprise-edition.component';
+import {StaticPaginationComponent} from './component/pagination/static-pagination/static-pagination.component';
+import {ServerSidePaginationComponent} from './component/pagination/server-side-pagination/server-side-pagination.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import {EnterpriseEditionComponent} from './component/enterprise-edition/enterpr
     AboutMeComponent,
     CommunityEditionComponent,
     EnterpriseEditionComponent,
+    ServerSidePaginationComponent,
+    StaticPaginationComponent,
   ],
   imports: [
     BrowserModule,
