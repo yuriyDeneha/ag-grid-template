@@ -10,25 +10,22 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {AboutMeComponent} from './component/about-me/about-me.component';
-import {HomePageComponent} from './component/home-page/home-page.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import {AgGridModule} from 'ag-grid-angular';
 import {HttpClientModule} from '@angular/common/http';
 import 'ag-grid-enterprise';
-import {CommunityEditionComponent} from './component/community-edition/community-edition.component';
-import {EnterpriseEditionComponent} from './component/enterprise-edition/enterprise-edition.component';
-import {StaticPaginationComponent} from './component/pagination/static-pagination/static-pagination.component';
-import {ServerSidePaginationComponent} from './component/pagination/server-side-pagination/server-side-pagination.component';
-
+import { DatePipe } from '@angular/common';
+import { MatNativeDateModule } from '@angular/material/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { DatePickerEditorComponent } from './components/cars-table/ag-grid-components/ag-grid-datepicker/datepicker.component';
+import { CarsTableComponent } from './components/cars-table/cars-table.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
-    AboutMeComponent,
-    CommunityEditionComponent,
-    EnterpriseEditionComponent,
-    ServerSidePaginationComponent,
-    StaticPaginationComponent,
+    CarsTableComponent,
+    DatePickerEditorComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,11 +36,16 @@ import {ServerSidePaginationComponent} from './component/pagination/server-side-
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatFormFieldModule,
     MatToolbarModule,
+    MatDatepickerModule,
+    MatListModule,
+    ReactiveFormsModule,
     AgGridModule.withComponents([])
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

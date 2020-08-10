@@ -1,0 +1,11 @@
+<ag-grid-angular
+  #agGridTemplate
+  class="ag-theme-balham"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [editType]="editType"
+  [frameworkComponents]="frameworkComponents"
+  (gridReady)="onGridReady($event)"
+  rowSelection="multiple"
+></ag-grid-angular>

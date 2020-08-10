@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Ag-Grid"
+    }
+  },
+  "defaultProject": "Ag-Grid",
+  "cli": {
+    "analytics": false
+  }
 }
