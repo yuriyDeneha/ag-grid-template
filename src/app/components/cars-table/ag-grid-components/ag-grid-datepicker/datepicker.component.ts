@@ -1,11 +1,12 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { IAgGridFrameworkComponent } from './ag-grid-framework.interface';
 
 @Component({
   selector: 'app-datepicker-cell',
   templateUrl: './datepicker.component.html',
 })
-export class DatePickerEditorComponent {
+export class DatePickerEditorComponent implements IAgGridFrameworkComponent {
   @ViewChild('i', { static: false })
   textInput: ElementRef;
 

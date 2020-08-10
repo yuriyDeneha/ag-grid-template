@@ -29,7 +29,7 @@ export class CarsTableComponent implements OnInit {
       field: 'name', sortable: true, filter: true, editable: true
     },
     {headerName: 'Car sales date', field: 'countrycode', sortable: true, filter: true, editable: true,
-      valueFormatter: this.dateValueFormatter,
+      valueFormatter: this.dateValueFormatter.bind(this),
       cellEditor: 'matDatepicker'
     },
     {
@@ -66,9 +66,6 @@ export class CarsTableComponent implements OnInit {
       });
   }
 
-  private getRandomArbitrary(min: number, max: number): number {
-    return Math.random() * (max - min) + min;
-  }
 
   private priceValueFormatter(params: {value: any}) {
     return '$' + params.value;
@@ -79,6 +76,10 @@ export class CarsTableComponent implements OnInit {
       new Date(params.value) :
       new Date(new Date().getTime() + this.getRandomArbitrary(- this.DATE_TIME_DELTA, this.DATE_TIME_DELTA));
     return this.datePipe.transform(new Date(date), 'short');
+  }
+
+  private getRandomArbitrary(min: number, max: number): number {
+    return Math.random() * (max - min) + min;
   }
 
   public onGridReady(params): void {
